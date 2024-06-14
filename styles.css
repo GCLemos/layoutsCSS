@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    gap: 0px;
+    flex-wrap: none; 
+    justify-content: none; 
+    align-items: none; 
+    align-content: none; 
+}
+
+.flex-item {
+    background-color: #f0f0f0;
+    margin: 0.5rem;
+    padding: 1rem;
+    flex: 1;
+    text-align: center;
+    min-width: 150px; 
+}
+
+.controls {
+    margin-top: 1rem;
+}
+
+.controls label {
+    margin-right: 0.5rem;
+}
+
+.controls select, .controls input {
+    margin-right: 1rem;
+}

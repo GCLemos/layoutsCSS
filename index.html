@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando Propriedades CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explorando Propriedades CSS</h1>
+        <nav>
+            <ul>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid">Grid</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="flexbox">
+            <h2>Flexbox</h2>
+            <div class="flex-container">
+                <div class="flex-item" data-index="1">1</div>
+                <div class="flex-item" data-index="2">2</div>
+                <div class="flex-item" data-index="3">3</div>
+                <div class="flex-item" data-index="4">4</div>
+                <div class="flex-item" data-index="5">5</div>
+                <div class="flex-item" data-index="6">6</div>
+            </div>
+            <div class="controls">
+                <label for="direction">Flex Direction:</label>
+                <select id="direction">
+                    <option value="">None</option>
+                    <option value="row">Row</option>
+                    <option value="row-reverse">Row Reverse</option>
+                    <option value="column">Column</option>
+                    <option value="column-reverse">Column Reverse</option>
+                </select>
+                <label for="justify-content">Justify Content:</label>
+                <select id="justify-content">
+                    <option value="">None</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                    <option value="space-evenly">Space Evenly</option>
+                </select>                
+                <label for="align-items">Align Items:</label>
+                <select id="align-items">
+                    <option value="">None</option>
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="baseline">Baseline</option>
+                </select>
+                <label for="align-content">Align Content:</label>
+                <select id="align-content">
+                    <option value="">None</option>
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                </select>
+                <label for="flex-wrap">Flex Wrap:</label>
+                <select id="flex-wrap">
+                    <option value="">None</option>
+                    <option value="nowrap">No Wrap</option>
+                    <option value="wrap">Wrap</option>
+                    <option value="wrap-reverse">Wrap Reverse</option>
+                </select>
+                <label for="gap">Gap (px):</label>
+                <input type="number" id="gap" value="10" min="0">
+            </div>
+            <div class="item-controls">
+                <h3>Item 1</h3>
+                <label for="order-1">Order:</label>
+                <input type="number" id="order-1" data-index="1" value="" min="0">
+                <label for="flex-grow-1">Flex Grow:</label>
+                <input type="number" id="flex-grow-1" data-index="1" value="" min="0">
+                <label for="flex-shrink-1">Flex Shrink:</label>
+                <input type="number" id="flex-shrink-1" data-index="1" value="" min="0">
+                <label for="flex-basis-1">Flex Basis (px):</label>
+                <input type="number" id="flex-basis-1" data-index="1" value="" min="0">
+                <label for="align-self-1">Align Self:</label>
+                <select id="align-self-1" data-index="1">
+                    <option value="">None</option>
+                    <option value="auto">Auto</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="baseline">Baseline</option>
+                    <option value="stretch">Stretch</option>
+                </select>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
