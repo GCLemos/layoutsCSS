@@ -2,36 +2,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #262438;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #d0f0f8;
+    color: #000000;
     padding: 1rem;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    text-align: center;
 }
 
 main {
     padding: 1rem;
+    gap: 5em;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -40,23 +31,18 @@ section {
 
 .flex-container {
     display: flex;
-    margin: 1rem 0;
     border: 1px solid #ccc;
     padding: 1rem;
-    gap: 0px;
-    flex-wrap: none; 
-    justify-content: none; 
-    align-items: none; 
-    align-content: none; 
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .flex-item {
-    background-color: #f0f0f0;
-    margin: 0.5rem;
+    background-color: #ece8cf;
+    color: #000;
     padding: 1rem;
-    flex: 1;
     text-align: center;
-    min-width: 150px; 
+    min-width: 100px;
 }
 
 .controls {
@@ -69,4 +55,22 @@ section {
 
 .controls select, .controls input {
     margin-right: 1rem;
+}
+
+.align-items-container {
+    height: 200px; 
+}
+
+.align-content-container {
+    height: 200px; 
+    flex-wrap: wrap; 
+}
+
+.flex-wrap-container {
+    width: 300px; 
+}
+
+.flex-wrap-container .flex-item {
+    width: 100px; 
+    height: 100px; 
 }
