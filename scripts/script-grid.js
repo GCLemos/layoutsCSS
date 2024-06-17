@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleção dos elementos de entrada
+    // Selection of input elements
     const inputs = {
         gridTemplateColumns: document.getElementById('grid-template-columns-input'),
         gridTemplateRows: document.getElementById('grid-template-rows-input'),
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gridAutoFlow: document.getElementById('grid-auto-flow-select')
     };
 
-    // Seleção dos containers
+    // Selection of containers
     const containers = {
         gridTemplateColumns: document.querySelector('.grid-template-columns-container'),
         gridTemplateRows: document.querySelector('.grid-template-rows-container'),
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gridAutoFlow: document.querySelector('.grid-auto-flow-container')
     };
 
-    // Funções de atualização
+    // Update functions
     function updateGridTemplateColumns() {
         containers.gridTemplateColumns.style.gridTemplateColumns = inputs.gridTemplateColumns.value;
     }
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         containers.gridAutoFlow.style.gridAutoFlow = inputs.gridAutoFlow.value;
     }
 
-    // Associação dos eventos aos inputs
+    // Event association with inputs
     inputs.gridTemplateColumns.addEventListener('input', updateGridTemplateColumns);
     inputs.gridTemplateRows.addEventListener('input', updateGridTemplateRows);
     inputs.gridGap.addEventListener('input', updateGridGap);
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     inputs.alignContent.addEventListener('change', updateAlignContent);
     inputs.gridAutoFlow.addEventListener('change', updateGridAutoFlow);
 
-    // Inicialização dos valores
+    // Initialization of values
     updateGridTemplateColumns();
     updateGridTemplateRows();
     updateGridGap();

@@ -2,7 +2,7 @@
 
 .span-flex {
     font-size: xxx-large;
-    background: linear-gradient(90deg, rgba(151,128,229,1) 0%, rgba(230,102,204,1) 100%); 
+    background: var(--bg-linear-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -55,3 +55,4 @@
     width: 200px; 
     height: 200px; 
 }
+

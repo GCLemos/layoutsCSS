@@ -21,7 +21,7 @@
 
 .span-grid {
     font-size: xxx-large;
-    background: linear-gradient(90deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 100%);
+    background: var(--bg-linear-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
