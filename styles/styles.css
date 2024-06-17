@@ -5,6 +5,7 @@
     --bg-linear-purple: linear-gradient(90deg, rgba(151,128,229,1) 0%, rgba(230,102,204,1) 100%);
     --bg-linear-blue: linear-gradient(90deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 100%);
     --bg-linear-blue-animation: linear-gradient(110deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 50%, rgba(126,218,227,1) 100%);
+    --bg-linear-blue-to-purple-animation: linear-gradient(110deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 25%, rgba(230,102,204,1) 75%, rgba(126,218,227,1) 90%, rgba(126,218,227,1) 100%);
 }
 
 @keyframes background-pan {
@@ -12,9 +13,13 @@
       background-position: 0% center;
     }
   
-    to {
-      background-position: -200% center;
-    }
+    50% {
+        background-position: -100% center;
+      }
+    
+    100% {
+        background-position: -200% center;
+      }
   }
 
 * {
@@ -43,9 +48,23 @@ header {
     text-align: center;
 }
 
+.main-title-container {
+    text-align: center;
+}
+
+.main-title-container span {
+    background: var(--bg-linear-blue-to-purple-animation);
+    animation: background-pan 1.5s linear infinite;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+
+}
+
 main {
     padding: 1rem;
-    gap: 2em;
+    gap: 1.8em;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -180,7 +199,7 @@ footer hr {
 }
 
 footer span {
-    font-size: 1.2em;
+    font-size: 1em;
     background: var(--bg-linear-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -200,4 +219,8 @@ footer i:hover {
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
     cursor: pointer;
+}
+
+footer a {
+    color: inherit;
 }
