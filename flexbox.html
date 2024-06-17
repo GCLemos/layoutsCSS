@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Propriedades Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exemplos de Propriedades Flexbox</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="flexbox.html">Flexbox</a></li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="other.html">Other Important Stuff</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- Flex Direction Example -->
+        <section>
+            <h2>Flex Direction</h2>
+            <div class="flex-container flex-direction-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="flex-direction">Flex Direction:</label>
+                <select id="flex-direction">
+                    <option value="row">Row</option>
+                    <option value="row-reverse">Row Reverse</option>
+                    <option value="column">Column</option>
+                    <option value="column-reverse">Column Reverse</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Justify Content Example -->
+        <section>
+            <h2>Justify Content</h2>
+            <div class="flex-container justify-content-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="justify-content">Justify Content:</label>
+                <select id="justify-content">
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                    <option value="space-evenly">Space Evenly</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Align Items Example -->
+        <section>
+            <h2>Align Items</h2>
+            <div class="flex-container align-items-container" id="align-items-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="align-items">Align Items:</label>
+                <select id="align-items">
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="baseline">Baseline</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Align Content Example -->
+        <section>
+            <h2>Align Content</h2>
+            <div class="flex-container align-content-container" id="align-content-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+                <div class="flex-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="align-content">Align Content:</label>
+                <select id="align-content">
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                </select>
+            </div>
+        </section>
+
+
+        <!-- Flex Wrap Example -->
+        <section>
+            <h2>Flex Wrap</h2>
+            <div class="flex-container flex-wrap-container" id="flex-wrap-example">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+                <div class="flex-item">5</div>
+            </div>
+            <div class="controls">
+                <label for="flex-wrap">Flex Wrap:</label>
+                <select id="flex-wrap">
+                    <option value="nowrap">No Wrap</option>
+                    <option value="wrap">Wrap</option>
+                    <option value="wrap-reverse">Wrap Reverse</option>
+                </select>
+            </div>
+        </section>
+
+
+
+        <!-- Gap Example -->
+        <section>
+            <h2>Gap</h2>
+            <div class="flex-container gap-container">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="gap">Gap (px):</label>
+                <input type="number" id="gap" value="10" min="0">
+            </div>
+        </section>
+
+                <!-- Flexbox Completo Example -->
+                <section id="flexbox-completo">
+                    <h2>Flexbox Completo</h2>
+                    <div class="flex-container completo-container">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                    </div>
+                    <div class="controls">
+                        <label for="completo-flex-direction">Flex Direction:</label>
+                        <select id="completo-flex-direction">
+                            <option value="row">Row</option>
+                            <option value="row-reverse">Row Reverse</option>
+                            <option value="column">Column</option>
+                            <option value="column-reverse">Column Reverse</option>
+                        </select>
+        
+                        <label for="completo-justify-content">Justify Content:</label>
+                        <select id="completo-justify-content">
+                            <option value="flex-start">Flex Start</option>
+                            <option value="flex-end">Flex End</option>
+                            <option value="center">Center</option>
+                            <option value="space-between">Space Between</option>
+                            <option value="space-around">Space Around</option>
+                            <option value="space-evenly">Space Evenly</option>
+                        </select>
+        
+                        <label for="completo-align-items">Align Items:</label>
+                        <select id="completo-align-items">
+                            <option value="stretch">Stretch</option>
+                            <option value="flex-start">Flex Start</option>
+                            <option value="flex-end">Flex End</option>
+                            <option value="center">Center</option>
+                            <option value="baseline">Baseline</option>
+                        </select>
+        
+                        <label for="completo-align-content">Align Content:</label>
+                        <select id="completo-align-content">
+                            <option value="stretch">Stretch</option>
+                            <option value="flex-start">Flex Start</option>
+                            <option value="flex-end">Flex End</option>
+                            <option value="center">Center</option>
+                            <option value="space-between">Space Between</option>
+                            <option value="space-around">Space Around</option>
+                        </select>
+        
+                        <label for="completo-flex-wrap">Flex Wrap:</label>
+                        <select id="completo-flex-wrap">
+                            <option value="nowrap">No Wrap</option>
+                            <option value="wrap">Wrap</option>
+                            <option value="wrap-reverse">Wrap Reverse</option>
+                        </select>
+        
+                        <label for="completo-gap">Gap (px):</label>
+                        <input type="number" id="completo-gap" value="10" min="0">
+                    </div>
+                </section>
+    </main>
+    <script src="scriptFlexBox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Propriedades Grid</title>
+    <link rel="stylesheet" href="styles-grid.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exemplos de Propriedades Grid</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="flexbox.html">Flexbox</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="other.html">Other Important Stuff</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Grid Template Columns Example -->
+        <section id="grid-template-columns">
+            <h2>Grid Template Columns</h2>
+            <div class="grid-container grid-template-columns-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="grid-template-columns-select">Grid Template Columns:</label>
+                <input type="text" id="grid-template-columns-input" value="1fr 1fr 1fr">
+            </div>
+        </section>
+
+        <!-- Grid Template Rows Example -->
+        <section id="grid-template-rows">
+            <h2>Grid Template Rows</h2>
+            <div class="grid-container grid-template-rows-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="grid-template-rows-select">Grid Template Rows:</label>
+                <input type="text" id="grid-template-rows-input" value="100px 100px 100px">
+            </div>
+        </section>
+
+        <!-- Grid Gap Example -->
+        <section id="grid-gap">
+            <h2>Grid Gap</h2>
+            <div class="grid-container grid-gap-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="grid-gap-input">Grid Gap (px):</label>
+                <input type="number" id="grid-gap-input" value="10" min="0">
+            </div>
+        </section>
+
+    </main>
+    <script src="script-grid.js"></script>
+</body>
+
+</html>
