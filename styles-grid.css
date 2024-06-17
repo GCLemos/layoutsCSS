@@ -11,6 +11,7 @@
 
 .grid-item {
     background-color: #7edae3;
+    min-height: 1em;
     min-width: 2em;
     border-radius: 10px;
     color: #000;
@@ -23,7 +24,11 @@
     background: linear-gradient(90deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
+.grid-gap-container {
+    display: grid;
+    grid-auto-flow: column;
 }
 
 .justify-items-container {
@@ -31,9 +36,15 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.justify-content-container {
+    display: grid;
+    grid-auto-flow: column;
+}
 
 .align-items-container, .align-content-container {
-    height: 50%;
+    display: grid;
+    grid-auto-flow: row;
+    height: 15em;
 }
 
 .controls {

@@ -1,99 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const gridTemplateColumnsInput = document.getElementById('grid-template-columns-input');
-    const gridTemplateRowsInput = document.getElementById('grid-template-rows-input');
-    const gridTemplateColumnsContainer = document.querySelector('.grid-template-columns-container');
-    const gridTemplateRowsContainer = document.querySelector('.grid-template-rows-container');
+    // Seleção dos elementos de entrada
+    const inputs = {
+        gridTemplateColumns: document.getElementById('grid-template-columns-input'),
+        gridTemplateRows: document.getElementById('grid-template-rows-input'),
+        gridGap: document.getElementById('grid-gap-input'),
+        justifyItems: document.getElementById('justify-items-select'),
+        alignItems: document.getElementById('align-items-select'),
+        justifyContent: document.getElementById('justify-content-select'),
+        alignContent: document.getElementById('align-content-select'),
+        gridAutoFlow: document.getElementById('grid-auto-flow-select')
+    };
 
+    // Seleção dos containers
+    const containers = {
+        gridTemplateColumns: document.querySelector('.grid-template-columns-container'),
+        gridTemplateRows: document.querySelector('.grid-template-rows-container'),
+        gridGap: document.querySelector('.grid-gap-container'),
+        justifyItems: document.querySelector('.justify-items-container'),
+        alignItems: document.querySelector('.align-items-container'),
+        justifyContent: document.querySelector('.justify-content-container'),
+        alignContent: document.querySelector('.align-content-container'),
+        gridAutoFlow: document.querySelector('.grid-auto-flow-container')
+    };
+
+    // Funções de atualização
     function updateGridTemplateColumns() {
-        gridTemplateColumnsContainer.style.gridTemplateColumns = gridTemplateColumnsInput.value;
+        containers.gridTemplateColumns.style.gridTemplateColumns = inputs.gridTemplateColumns.value;
     }
 
     function updateGridTemplateRows() {
-        gridTemplateRowsContainer.style.gridTemplateRows = gridTemplateRowsInput.value;
+        containers.gridTemplateRows.style.gridTemplateRows = inputs.gridTemplateRows.value;
     }
-
-    gridTemplateColumnsInput.addEventListener('input', updateGridTemplateColumns);
-    gridTemplateRowsInput.addEventListener('input', updateGridTemplateRows);
-
-    updateGridTemplateColumns();
-    updateGridTemplateRows();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const gridGapInput = document.getElementById('grid-gap-input');
-    const gridGapContainer = document.querySelector('.grid-gap-container');
 
     function updateGridGap() {
-        gridGapContainer.style.gap = `${gridGapInput.value}px`;
+        containers.gridGap.style.gap = `${inputs.gridGap.value}px`;
     }
-
-    gridGapInput.addEventListener('input', updateGridGap);
-
-    updateGridGap();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Justify Items
-    const justifyItemsSelect = document.getElementById('justify-items-select');
-    const justifyItemsContainer = document.querySelector('.justify-items-container');
 
     function updateJustifyItems() {
-        justifyItemsContainer.style.justifyItems = justifyItemsSelect.value;
+        containers.justifyItems.style.justifyItems = inputs.justifyItems.value;
     }
-
-    justifyItemsSelect.addEventListener('change', updateJustifyItems);
-
-    updateJustifyItems();
-
-    // Align Items
-    const alignItemsSelect = document.getElementById('align-items-select');
-    const alignItemsContainer = document.querySelector('.align-items-container');
 
     function updateAlignItems() {
-        alignItemsContainer.style.alignItems = alignItemsSelect.value;
+        containers.alignItems.style.alignItems = inputs.alignItems.value;
     }
-
-    alignItemsSelect.addEventListener('change', updateAlignItems);
-
-    updateAlignItems();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Justify Content
-    const justifyContentSelect = document.getElementById('justify-content-select');
-    const justifyContentContainer = document.querySelector('.justify-content-container');
 
     function updateJustifyContent() {
-        justifyContentContainer.style.justifyContent = justifyContentSelect.value;
+        containers.justifyContent.style.justifyContent = inputs.justifyContent.value;
     }
-
-    justifyContentSelect.addEventListener('change', updateJustifyContent);
-
-    updateJustifyContent();
-
-
-
-    // Align Content
-    const alignContentSelect = document.getElementById('align-content-select');
-    const alignContentContainer = document.querySelector('.align-content-container');
 
     function updateAlignContent() {
-        alignContentContainer.style.alignContent = alignContentSelect.value;
+        containers.alignContent.style.alignContent = inputs.alignContent.value;
     }
-
-    alignContentSelect.addEventListener('change', updateAlignContent);
-
-    updateAlignContent();
-
-    // Grid Auto Flow
-    const gridAutoFlowSelect = document.getElementById('grid-auto-flow-select');
-    const gridAutoFlowContainer = document.querySelector('.grid-auto-flow-container');
 
     function updateGridAutoFlow() {
-        gridAutoFlowContainer.style.gridAutoFlow = gridAutoFlowSelect.value;
+        containers.gridAutoFlow.style.gridAutoFlow = inputs.gridAutoFlow.value;
     }
 
-    gridAutoFlowSelect.addEventListener('change', updateGridAutoFlow);
+    // Associação dos eventos aos inputs
+    inputs.gridTemplateColumns.addEventListener('input', updateGridTemplateColumns);
+    inputs.gridTemplateRows.addEventListener('input', updateGridTemplateRows);
+    inputs.gridGap.addEventListener('input', updateGridGap);
+    inputs.justifyItems.addEventListener('change', updateJustifyItems);
+    inputs.alignItems.addEventListener('change', updateAlignItems);
+    inputs.justifyContent.addEventListener('change', updateJustifyContent);
+    inputs.alignContent.addEventListener('change', updateAlignContent);
+    inputs.gridAutoFlow.addEventListener('change', updateGridAutoFlow);
 
+    // Inicialização dos valores
+    updateGridTemplateColumns();
+    updateGridTemplateRows();
+    updateGridGap();
+    updateJustifyItems();
+    updateAlignItems();
+    updateJustifyContent();
+    updateAlignContent();
     updateGridAutoFlow();
 });
