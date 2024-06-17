@@ -42,6 +42,10 @@ section {
     margin-bottom: 2rem;
 }
 
+section h2 {
+    margin-bottom: 0.6em;
+}
+
 nav {
     width: 100%;
 }
@@ -79,23 +83,20 @@ nav {
 
 }
 
-.option-container {
+
+.link-to {
+    text-decoration: none;
+    color: inherit;
     width: 80%;
     height: 80px;
     background-color: #2b2b2b;
-    border: 2px solid #ccc;
     border-radius: 20px;
     line-height: 1.6;
     padding: 0.8rem;
     transition: all 0.2s ease-in-out;
 }
 
-.link-to {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+
 
 .fa-bars-progress {
     background: linear-gradient(90deg, rgba(151,128,229,1) 0%, rgba(230,102,204,1) 100%); 
@@ -112,8 +113,8 @@ nav {
 }
 
 
-.option-container-flex {
-    border-color: #9780e5;
+.link-to-flex {
+    border: 2px solid #9780e5;
 }
 
 .option-container-flex  h3 {
@@ -122,8 +123,8 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.option-container-grid {
-    border-color: #7EDAE3;
+.link-to-grid {
+    border: 2px solid #7EDAE3;
 }
 
 .option-container-grid h3 {
@@ -132,7 +133,7 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.option-container:hover{
+.link-to:hover{
     background-color: #3f3f3f;
     cursor: pointer;
 }
