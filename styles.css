@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+root {
+    
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +11,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1f1f1f;
+    background-color: #1f1f1d;
     color: #fff;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 2em;
 }
 
 header {
@@ -49,6 +53,7 @@ nav {
     justify-content: center;
     list-style: none;
     background-color: #333;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar a {
@@ -56,6 +61,7 @@ nav {
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+    transition: all 0.2s ease-in-out;
 }
 
 .navbar a:hover {
@@ -63,16 +69,79 @@ nav {
     border-radius: 5px;
 }
 
+.options-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
+}
+
+.option-container {
+    width: 80%;
+    height: 80px;
+    background-color: #2b2b2b;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    line-height: 1.6;
+    padding: 0.8rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.link-to {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-bars-progress {
+    background: linear-gradient(90deg, rgba(151,128,229,1) 0%, rgba(230,102,204,1) 100%); 
+}
+
+.fa-grip{
+    background: linear-gradient(90deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 100%);
+}
+
+.fa-solid {
+    font-size: 1.5rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.option-container-flex {
+    border-color: #9780e5;
+}
+
+.option-container-flex  h3 {
+    background: linear-gradient(90deg, rgba(151,128,229,1) 0%, rgba(230,102,204,1) 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.option-container-grid {
+    border-color: #7EDAE3;
+}
+
+.option-container-grid h3 {
+    background: linear-gradient(90deg, rgba(126,218,227,1) 0%, rgba(151,128,229,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.option-container:hover{
+    background-color: #3f3f3f;
+    cursor: pointer;
+}
 
 /* Welcome Section Styles */
 .welcome-section {
     text-align: center;
 }
 
-.welcome-section h2 {
-    margin-top: -40px;
-}
 
 .welcome-section p {
     margin-bottom: 10px;
