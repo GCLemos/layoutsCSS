@@ -11,14 +11,14 @@
 <body>
     <header>
         <h1>Exemplos de Propriedades Grid</h1>
-        <nav>
-            <ul class="navbar">
-                <li><a href="flexbox.html">Flexbox</a></li>
-                <li><a href="grid.html">Grid</a></li>
-                <li><a href="other.html">Other Important Stuff</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="flexbox.html">Flexbox</a></li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="other.html">Other Important Stuff</a></li>
+        </ul>
+    </nav>
     <main>
         <!-- Grid Template Columns Example -->
         <section id="grid-template-columns">
@@ -70,6 +70,117 @@
                 <input type="number" id="grid-gap-input" value="10" min="0">
             </div>
         </section>
+
+        <!-- Justify Items Example -->
+        <section id="justify-items">
+            <h2>Justify Items</h2>
+            <div class="grid-container justify-items-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="justify-items-select">Justify Items:</label>
+                <select id="justify-items-select">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                    <option value="center">Center</option>
+                    <option value="stretch">Stretch</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Align Items Example -->
+        <section id="align-items">
+            <h2>Align Items</h2>
+            <div class="grid-container align-items-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="align-items-select">Align Items:</label>
+                <select id="align-items-select">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                    <option value="center">Center</option>
+                    <option value="stretch">Stretch</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Justify Content Example -->
+        <section id="justify-content">
+            <h2>Justify Content</h2>
+            <div class="grid-container justify-content-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="justify-content-select">Justify Content:</label>
+                <select id="justify-content-select">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                    <option value="center">Center</option>
+                    <option value="stretch">Stretch</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                    <option value="space-evenly">Space Evenly</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Align Content Example -->
+        <section id="align-content">
+            <h2>Align Content</h2>
+            <div class="grid-container align-content-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+            </div>
+            <div class="controls">
+                <label for="align-content-select">Align Content:</label>
+                <select id="align-content-select">
+                    <option value="start">Start</option>
+                    <option value="end">End</option>
+                    <option value="center">Center</option>
+                    <option value="stretch">Stretch</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                    <option value="space-evenly">Space Evenly</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Grid Auto Flow Example -->
+        <section id="grid-auto-flow">
+            <h2>Grid Auto Flow</h2>
+            <div class="grid-container grid-auto-flow-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="controls">
+                <label for="grid-auto-flow-select">Grid Auto Flow:</label>
+                <select id="grid-auto-flow-select">
+                    <option value="row">Row</option>
+                    <option value="column">Column</option>
+                    <option value="row dense">Row Dense</option>
+                    <option value="column dense">Column Dense</option>
+                </select>
+            </div>
+        </section>
+
 
     </main>
     <script src="script-grid.js"></script>

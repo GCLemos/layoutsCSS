@@ -31,3 +31,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateGridGap();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Justify Items
+    const justifyItemsSelect = document.getElementById('justify-items-select');
+    const justifyItemsContainer = document.querySelector('.justify-items-container');
+
+    function updateJustifyItems() {
+        justifyItemsContainer.style.justifyItems = justifyItemsSelect.value;
+    }
+
+    justifyItemsSelect.addEventListener('change', updateJustifyItems);
+
+    updateJustifyItems();
+
+    // Align Items
+    const alignItemsSelect = document.getElementById('align-items-select');
+    const alignItemsContainer = document.querySelector('.align-items-container');
+
+    function updateAlignItems() {
+        alignItemsContainer.style.alignItems = alignItemsSelect.value;
+    }
+
+    alignItemsSelect.addEventListener('change', updateAlignItems);
+
+    updateAlignItems();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Justify Content
+    const justifyContentSelect = document.getElementById('justify-content-select');
+    const justifyContentContainer = document.querySelector('.justify-content-container');
+
+    function updateJustifyContent() {
+        justifyContentContainer.style.justifyContent = justifyContentSelect.value;
+    }
+
+    justifyContentSelect.addEventListener('change', updateJustifyContent);
+
+    updateJustifyContent();
+
+
+
+    // Align Content
+    const alignContentSelect = document.getElementById('align-content-select');
+    const alignContentContainer = document.querySelector('.align-content-container');
+
+    function updateAlignContent() {
+        alignContentContainer.style.alignContent = alignContentSelect.value;
+    }
+
+    alignContentSelect.addEventListener('change', updateAlignContent);
+
+    updateAlignContent();
+
+    // Grid Auto Flow
+    const gridAutoFlowSelect = document.getElementById('grid-auto-flow-select');
+    const gridAutoFlowContainer = document.querySelector('.grid-auto-flow-container');
+
+    function updateGridAutoFlow() {
+        gridAutoFlowContainer.style.gridAutoFlow = gridAutoFlowSelect.value;
+    }
+
+    gridAutoFlowSelect.addEventListener('change', updateGridAutoFlow);
+
+    updateGridAutoFlow();
+});

@@ -1,28 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #262438;
-    color: #fff;
-}
-
-header {
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-main {
-    padding: 1rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
+@import url(styles.css);
 
 .grid-container {
     display: grid;
@@ -37,6 +13,17 @@ section {
     color: #000;
     padding: 1rem;
     text-align: center;
+}
+
+.justify-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Two columns with equal width */
+    gap: 10px; /* Add some gap between items for better visibility */
+}
+
+
+.align-items-container, .align-content-container {
+    height: 400px;
 }
 
 .controls {
