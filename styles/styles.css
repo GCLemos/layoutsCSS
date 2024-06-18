@@ -9,6 +9,10 @@
 
     --bg-light-gray: #2b2b2b;
     --off-white: #e6e4de;
+
+    --bg-LM-darker-off-white: #dfdcb1;
+    --bg-LM-off-white: #e4e2d0;
+    --LM-color: #1a1a1a;
 }
 
 @keyframes background-pan {
@@ -24,6 +28,18 @@
         background-position: -200% center;
     }
 }
+
+/* Add classes for JavaScript functionality */
+body.light-mode {
+    background-color: var(--bg-LM-off-white);
+    color: var(--LM-color); 
+}
+
+.link-to.light-mode {
+    background-color: var(--bg-LM-darker-off-white);
+    color: var(--LM-color);
+}
+
 
 * {
     margin: 0;
@@ -83,6 +99,13 @@ section h2 {
 
 nav {
     width: 100%;
+    margin-bottom: 2em;
+}
+
+.nav-functions-container {
+    display: flex;
+    gap: 1em;
+    justify-content: end;
 }
 
 input {
@@ -95,12 +118,15 @@ input {
     justify-content: center;
     list-style: none;
     background-color: #333;
-    transition: top 0.3s ease-in-out; /* Transição suave para a posição top */
+    transition: top 0.3s ease-in-out;
     position: fixed; /* Navbar fixa no topo */
     top: 0; /* Inicialmente no topo */
     z-index: 1000; /* Sobrepor outros elementos */
 }
 
+.navbar.hidden {
+    top: -100px; /* Esconde a navbar */
+}
 
 .navbar a {
     color: var(--off-white);
@@ -114,6 +140,7 @@ input {
     background-color: #575757;
     border-radius: 5px;
 }
+
 
 .options-section {
     width: 90%;
@@ -273,6 +300,24 @@ footer a {
 }
 
 @media (min-width: 1249px) {
+    body {
+        min-height: 100vh;
+    }
+
+    nav {
+        margin-bottom: 4em;
+    }
+
+    .navbar {
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+        font-size: large;
+
+    }
+
     .content-container {
         width: 50%;
         display: flex;

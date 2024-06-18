@@ -1,18 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
+const navbar = document.getElementById("navbar");
+let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+function onScroll() {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-            // Rolando para baixo
-            navbar.style.top = '-100px'; // Move a navbar para fora da tela
-        } else {
-            // Rolando para cima
-            navbar.style.top = '0'; // Move a navbar de volta ao topo
-        }
+    if (currentScrollPosition > lastScrollPosition) {
+        navbar.classList.add("hidden"); // Adiciona a classe "hidden" para esconder a navbar
+    } else {
+        navbar.classList.remove("hidden"); // Remove a classe "hidden" para mostrar a navbar
+    }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para lidar com scroll negativo no iOS
-    });
-});
+    lastScrollPosition = currentScrollPosition;
+}
+
+window.addEventListener("scroll", onScroll);
+
+function translatePage() {
+    // Lógica para alternar entre traduzir a página para inglês/português
+    // Implemente aqui a lógica desejada
+    const body = document.querySelector("body");
+    const currentLanguage = body.getAttribute("lang");
+    const newLanguage = currentLanguage === "en" ? "pt" : "en";
+    body.setAttribute("lang", newLanguage);
+}
+
+function toggleLightMode() {
+    // Lógica para alternar entre modo claro e escuro
+    // Implemente aqui a lógica desejada
+    const body = document.querySelector("body");
+    const links = document.querySelectorAll(".link-to");
+
+    body.classList.toggle("light-mode");
+    links.forEach(link => link.classList.toggle("light-mode"));
+}
