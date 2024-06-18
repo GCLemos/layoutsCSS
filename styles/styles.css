@@ -99,19 +99,35 @@ input {
     margin: 0.35em 0;
 }
 
+.nav-functions-container {
+    height: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: end;
+}
+
+.light-dark-button {
+    background: url(../assets/lightbulb-solid.svg) no-repeat center; 
+    width: 20px;
+    height: 8px;
+}
+
 .navbar {
     width: 100%;
-
     display: flex;
     justify-content: center;
     list-style: none;
     background-color: #333;
-    transition: top 0.3s ease-in-out; /* Transição suave para a posição top */
+    transition: top 0.3s ease-in-out;
     position: fixed; /* Navbar fixa no topo */
     top: 0; /* Inicialmente no topo */
     z-index: 1000; /* Sobrepor outros elementos */
 }
 
+.navbar.hidden {
+    top: -100px; /* Esconde a navbar */
+}
 
 .navbar a {
     color: var(--off-white);
@@ -240,6 +256,11 @@ footer i:hover {
 
 footer a {
     color: inherit;
+}
+
+body.light-mode {
+    filter: invert(95%) hue-rotate(180deg);
+    background-color: var(--bg-LM-main-bg);
 }
 
 @media (min-height: 481px) {
