@@ -25,9 +25,17 @@ function translatePage() {
 }
 
 function toggleLightMode() {
-    // Lógica para alternar entre modo claro e escuro
-    // Implemente aqui a lógica desejada
     const body = document.querySelector("body");
-
     body.classList.toggle("light-mode");
+
+    // Salva o modo atual no armazenamento local
+    const isLightMode = body.classList.contains("light-mode");
+    localStorage.setItem("lightMode", isLightMode);
+}
+
+// Verifica se o modo claro está ativado no armazenamento local
+const isLightModeSaved = localStorage.getItem("lightMode");
+if (isLightModeSaved === "true") {
+    const body = document.querySelector("body");
+    body.classList.add("light-mode");
 }

@@ -6,6 +6,7 @@ section {
 
 
 .grid-container {
+    background-color: var(--bg-light-gray);
     display: grid;
     border: 2px solid #ccc;
     border-radius: 4px;
