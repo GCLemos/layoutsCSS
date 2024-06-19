@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en"></html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplos de Propriedades Flexbox</title>
+    <title>Flexbox Properties Examples</title>
     <link rel="stylesheet" href="styles/styles-flex.css">
     <script>
-        // Verifica se o modo claro está ativado no armazenamento local
+        // Check if light mode is enabled in local storage
         const isLightModeSaved = localStorage.getItem("lightMode");
         if (isLightModeSaved === "true") {
             document.documentElement.classList.add("light-mode");
@@ -26,7 +26,7 @@
         </ul>
     </nav>
     <header>
-        <h1>Propriedades  <br> <span class="span-flex">Flexbox</span></h1>
+        <h1> <span class="span-flex">Flexbox</span> <br> Properties</h1>
     </header>
     <div class="content-container">
         <main>
@@ -48,7 +48,7 @@
                     </select>
                 </div>
             </section>
-    
+
             <!-- Justify Content Example -->
             <section>
                 <h2>Justify Content</h2>
@@ -69,7 +69,7 @@
                     </select>
                 </div>
             </section>
-    
+
             <!-- Align Items Example -->
             <section>
                 <h2>Align Items</h2>
@@ -89,7 +89,7 @@
                     </select>
                 </div>
             </section>
-    
+
             <!-- Align Content Example -->
             <section>
                 <h2>Align Content</h2>
@@ -113,8 +113,8 @@
                     </select>
                 </div>
             </section>
-    
-    
+
+
             <!-- Flex Wrap Example -->
             <section>
                 <h2>Flex Wrap</h2>
@@ -134,9 +134,9 @@
                     </select>
                 </div>
             </section>
-    
-    
-    
+
+
+
             <!-- Gap Example -->
             <section>
                 <h2>Gap</h2>
@@ -150,66 +150,66 @@
                     <input type="number" id="gap" value="10" min="0">
                 </div>
             </section>
-    
-                    <!-- Flexbox Completo Example -->
-                    <section id="flexbox-completo">
-                        <h2>Flexbox Completo</h2>
-                        <div class="flex-container completo-container">
-                            <div class="flex-item">1</div>
-                            <div class="flex-item">2</div>
-                            <div class="flex-item">3</div>
-                            <div class="flex-item">4</div>
-                            <div class="flex-item">5</div>
-                        </div>
-                        <div class="controls">
-                            <label for="completo-flex-direction">Flex Direction:</label>
-                            <select id="completo-flex-direction">
-                                <option value="row">Row</option>
-                                <option value="row-reverse">Row Reverse</option>
-                                <option value="column">Column</option>
-                                <option value="column-reverse">Column Reverse</option>
-                            </select>
-            
-                            <label for="completo-justify-content">Justify Content:</label>
-                            <select id="completo-justify-content">
-                                <option value="flex-start">Flex Start</option>
-                                <option value="flex-end">Flex End</option>
-                                <option value="center">Center</option>
-                                <option value="space-between">Space Between</option>
-                                <option value="space-around">Space Around</option>
-                                <option value="space-evenly">Space Evenly</option>
-                            </select>
-            
-                            <label for="completo-align-items">Align Items:</label>
-                            <select id="completo-align-items">
-                                <option value="stretch">Stretch</option>
-                                <option value="flex-start">Flex Start</option>
-                                <option value="flex-end">Flex End</option>
-                                <option value="center">Center</option>
-                                <option value="baseline">Baseline</option>
-                            </select>
-            
-                            <label for="completo-align-content">Align Content:</label>
-                            <select id="completo-align-content">
-                                <option value="stretch">Stretch</option>
-                                <option value="flex-start">Flex Start</option>
-                                <option value="flex-end">Flex End</option>
-                                <option value="center">Center</option>
-                                <option value="space-between">Space Between</option>
-                                <option value="space-around">Space Around</option>
-                            </select>
-            
-                            <label for="completo-flex-wrap">Flex Wrap:</label>
-                            <select id="completo-flex-wrap">
-                                <option value="nowrap">No Wrap</option>
-                                <option value="wrap">Wrap</option>
-                                <option value="wrap-reverse">Wrap Reverse</option>
-                            </select>
-            
-                            <label for="completo-gap">Gap (px):</label>
-                            <input type="number" id="completo-gap" value="10" min="0">
-                        </div>
-                    </section>
+
+            <!-- Complete Flexbox Example -->
+            <section id="flexbox-completo">
+                <h2>Complete Flexbox</h2>
+                <div class="flex-container completo-container">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                </div>
+                <div class="controls">
+                    <label for="completo-flex-direction">Flex Direction:</label>
+                    <select id="completo-flex-direction">
+                        <option value="row">Row</option>
+                        <option value="row-reverse">Row Reverse</option>
+                        <option value="column">Column</option>
+                        <option value="column-reverse">Column Reverse</option>
+                    </select>
+
+                    <label for="completo-justify-content">Justify Content:</label>
+                    <select id="completo-justify-content">
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="space-between">Space Between</option>
+                        <option value="space-around">Space Around</option>
+                        <option value="space-evenly">Space Evenly</option>
+                    </select>
+
+                    <label for="completo-align-items">Align Items:</label>
+                    <select id="completo-align-items">
+                        <option value="stretch">Stretch</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="baseline">Baseline</option>
+                    </select>
+
+                    <label for="completo-align-content">Align Content:</label>
+                    <select id="completo-align-content">
+                        <option value="stretch">Stretch</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="center">Center</option>
+                        <option value="space-between">Space Between</option>
+                        <option value="space-around">Space Around</option>
+                    </select>
+
+                    <label for="completo-flex-wrap">Flex Wrap:</label>
+                    <select id="completo-flex-wrap">
+                        <option value="nowrap">No Wrap</option>
+                        <option value="wrap">Wrap</option>
+                        <option value="wrap-reverse">Wrap Reverse</option>
+                    </select>
+
+                    <label for="completo-gap">Gap (px):</label>
+                    <input type="number" id="completo-gap" value="10" min="0">
+                </div>
+            </section>
         </main>
     </div>
     <button id="backToTopBtn" class="back-to-top-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#e6e4de" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></button>
@@ -220,7 +220,7 @@
 
 <footer>
     <hr>
-    <p>Desenvolvido por <span>Gabriel Lemos</span></p>
+    <p>Developed by <span>Gabriel Lemos</span></p>
     <a href="https://www.linkedin.com/in/gclemos/" target="_blank">
         <i class="fa-brands fa-linkedin"></i>
     </a>
