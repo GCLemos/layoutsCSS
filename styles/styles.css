@@ -268,10 +268,38 @@ footer a {
     color: inherit;
 }
 
+.back-to-top-btn {
+    background: url(../assets/arrow-up-solid.svg) no-repeat center;
+    background-size: contain;
+    background-position: 50% 50%;
+    /* background-origin: content-box; */
+    display: none; /* Esconde o botão inicialmente */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 40%; /* Distância do fundo */
+    right: 50px; /* Distância da direita */
+    z-index: 100; /* Sobrepõe outros elementos */
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    padding: 8px 16px; /* Espaçamento interno */
+    margin: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: all 0.2s ease-in-out; /* Transição suave */
+}
+
+
+.back-to-top-btn:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+
 body.light-mode {
     filter: invert(95%) hue-rotate(180deg);
     background-color: var(--bg-LM-main-bg);
 }
+
+
 
 
 @media (min-height: 481px) {
