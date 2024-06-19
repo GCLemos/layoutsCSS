@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Properties Examples</title>
+    <title>Exemplos de Propriedades Grid</title>
     <link rel="stylesheet" href="styles/styles-grid.css">
+    <script>
+        // Verifica se o modo claro está ativado no armazenamento local
+        (function() {
+            const isLightModeSaved = localStorage.getItem("lightMode");
+            if (isLightModeSaved === "true") {
+                document.documentElement.classList.add("light-mode");
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -19,7 +28,7 @@
         </ul>
     </nav>
     <header>
-        <h1> <span class="span-grid">Grid</span> <br> Properties</h1>
+        <h1>Propriedades <br> <span class="span-grid">Grid</span></h1>
     </header>
     <div class="content-container">
         <main>
@@ -36,7 +45,7 @@
                     <input type="text" id="grid-template-columns-input" value="80px 5em 1fr">
                 </div>
             </section>
-
+    
             <!-- Grid Template Rows Example -->
             <section id="grid-template-rows">
                 <h2>Grid Template Rows</h2>
@@ -50,7 +59,7 @@
                     <input type="text" id="grid-template-rows-input" value="50px 80px 100px">
                 </div>
             </section>
-
+    
             <!-- Grid Gap Example -->
             <section id="grid-gap">
                 <h2>Grid Gap</h2>
@@ -64,7 +73,7 @@
                     <input type="number" id="grid-gap-input" value="10" min="0">
                 </div>
             </section>
-
+    
             <!-- Justify Items Example -->
             <section id="justify-items">
                 <h2>Justify Items</h2>
@@ -72,7 +81,7 @@
                     <div class="grid-item">1</div>
                     <div class="grid-item">2</div>
                     <div class="grid-item">3</div>
-
+    
                 </div>
                 <div class="controls">
                     <label for="justify-items-select">Justify Items:</label>
@@ -84,7 +93,7 @@
                     </select>
                 </div>
             </section>
-
+    
             <!-- Align Items Example -->
             <section id="align-items">
                 <h2>Align Items</h2>
@@ -103,7 +112,7 @@
                     </select>
                 </div>
             </section>
-
+    
             <!-- Justify Content Example -->
             <section id="justify-content">
                 <h2>Justify Content</h2>
@@ -125,7 +134,7 @@
                     </select>
                 </div>
             </section>
-
+    
             <!-- Align Content Example -->
             <section id="align-content">
                 <h2>Align Content</h2>
@@ -147,7 +156,7 @@
                     </select>
                 </div>
             </section>
-
+    
             <!-- Grid Auto Flow Example -->
             <section id="grid-auto-flow">
                 <h2>Grid Auto Flow</h2>
@@ -166,7 +175,7 @@
                     </select>
                 </div>
             </section>
-
+    
         </main>
     </div>
     <button id="backToTopBtn" class="back-to-top-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#e6e4de" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></button>
@@ -176,7 +185,7 @@
 </body>
 <footer>
     <hr>
-    <p>Developed by <span>Gabriel Lemos</span></p>
+    <p>Desenvolvido por <span>Gabriel Lemos</span></p>
     <a href="https://www.linkedin.com/in/gclemos/" target="_blank">
         <i class="fa-brands fa-linkedin"></i>
     </a>
