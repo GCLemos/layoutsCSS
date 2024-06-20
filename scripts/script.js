@@ -24,6 +24,7 @@ const translations = {
         "properties-grid": "Grid Properties",
         "about-site": "This website is designed to help you learn and understand the various properties of Flexbox and Grid.",
         "site-guide": "Use the menu above to navigate through different sections and explore the real time examples."
+        "complete-flexbox": "Complete Flexbox"
     },
     "pt-br": {
         "footer": "Desenvolvido por ",
@@ -31,7 +32,8 @@ const translations = {
         "properties-flex": "Propriedades do Flexbox",
         "properties-grid": "Propriedades do Grid",
         "about-site": "Este site foi projetado para ajudá-lo a aprender e compreender as diversas propriedades do Flexbox e do Grid.",
-        "site-guide": "Use o menu acima para navegar pelas diferentes seções e explorar os exemplos em tempo real."
+        "site-guide": "Use o menu acima para navegar pelas diferentes seções e explorar os exemplos em tempo real.",
+        "complete-flexbox": "Flexbox Completo"
     }
 };
 
