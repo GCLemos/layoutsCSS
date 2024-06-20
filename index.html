@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script>
-        // Verifica se o modo claro está ativado no armazenamento local
-        const isLightModeSaved = localStorage.getItem("lightMode");
-        if (isLightModeSaved === "true") {
-            document.documentElement.classList.add("light-mode");
-        }
-    </script>
 </head>
 
 <body>
+
     <nav>
         <ul class="navbar" id="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="flexbox.html">Flexbox</a></li>
             <li><a href="grid.html">Grid</a></li>
-            <li><a onclick="translatePage()" class="translate-button"></a></li>
+            <li><a onclick="translatePage()" class="translate-button" id="translate-button"></a></li>
             <li><a onclick="toggleLightMode()" class="light-dark-button"></a></li>
         </ul>
     </nav>
@@ -34,7 +28,7 @@
                 <span class="option-container option-container-flex">
                     <i class="fa-solid fa-bars-progress" style="color: #9780e5;"></i>
                     <h3>Flexbox</h3>
-                    <p>Propriedades FlexBox</p> 
+                    <p data-translate="properties-flex">Flexbox Properties</p> 
                 </span>
             </a>
     
@@ -42,24 +36,23 @@
                 <span class="option-container option-container-grid">
                     <i class="fa-solid fa-grip" style="color: #7edae3;"></i>
                     <h3>Grid</h3>
-                    <p>Propriedades Grid</p> 
+                    <p data-translate="properties-grid">Grid Properties</p> 
                 </span>
             </a>
         </div>
         <main>
             <section class="welcome-section">
-                <p>Este site é projetado para ajudá-lo a aprender e entender as várias propriedades do Flexbox e Grid.</p>
-                <p>Use o menu acima para navegar pelas diferentes seções e explorar exemplos detalhados.</p>
+                <p data-translate="about-site">This website is designed to help you learn and understand the various properties of Flexbox and Grid.</p>
+                <p data-translate="site-guide">Use the menu above to navigate through different sections and explore the real time examples.</p>
             </section>
         </main>
     </div>
-    <button id="backToTopBtn" class="back-to-top-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#e6e4de" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg></button>
     <script src="https://kit.fontawesome.com/107e685fb1.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
 </body>
 <footer>
     <hr>
-    <p>Desenvolvido por <span>Gabriel Lemos</span></p>
+    <p> <i data-translate="footer">Developed by</i> <span>Gabriel Lemos</span></p>
     <a href="https://www.linkedin.com/in/gclemos/" target="_blank">
         <i class="fa-brands fa-linkedin"></i>
     </a>
