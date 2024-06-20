@@ -50,7 +50,7 @@ section {
 .align-items-container, .align-content-container {
     display: grid;
     grid-auto-flow: row;
-    height: 15em;
+    height: 20em;
 }
 
 .controls {
