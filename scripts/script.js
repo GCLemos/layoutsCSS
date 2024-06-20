@@ -19,6 +19,7 @@ window.addEventListener("scroll", onScroll);
 const translations = {
     "en": {
         "footer": "Developed by",
+        "properties": "Properties",
         "properties-flex": "Flexbox Properties",
         "properties-grid": "Grid Properties",
         "about-site": "This website is designed to help you learn and understand the various properties of Flexbox and Grid.",
@@ -26,6 +27,7 @@ const translations = {
     },
     "pt-br": {
         "footer": "Desenvolvido por ",
+        "properties": "Propriedades",
         "properties-flex": "Propriedades do Flexbox",
         "properties-grid": "Propriedades do Grid",
         "about-site": "Este site foi projetado para ajudá-lo a aprender e compreender as diversas propriedades do Flexbox e do Grid.",
@@ -33,11 +35,9 @@ const translations = {
     }
 };
 
-function translatePage() {
+function translatePage(newLanguage) {
     const body = document.querySelector("body");
     const html = document.querySelector("html");
-    const currentLanguage = body.getAttribute("lang");
-    const newLanguage = currentLanguage === "pt-br" ? "en" : "pt-br";
     const textElements = document.querySelectorAll("[data-translate]"); // Elementos com atributo data-translate
 
     // Traduzir o texto
@@ -49,33 +49,32 @@ function translatePage() {
     // Alterne o atributo de idioma
     body.setAttribute("lang", newLanguage);
     html.setAttribute("lang", newLanguage);
+
+    // Salve a nova linguagem no localStorage
+    localStorage.setItem("preferredLanguage", newLanguage);
 }
 
-// Anexe a função ao seu botão
-document.querySelector("#translateButton").addEventListener("click", translatePage);
-
-function translateTexts() {
+// Função para alternar entre idiomas
+function toggleLanguage() {
     const body = document.querySelector("body");
     const currentLanguage = body.getAttribute("lang");
-    const textElements = document.querySelectorAll("[data-translate]"); // Elementos com atributo data-translate
+    const newLanguage = currentLanguage === "pt-br" ? "en" : "pt-br";
+    translatePage(newLanguage);
+}
 
-    if (currentLanguage === "pt-br") {
-        // Traduzir para Inglês
-        textElements.forEach(el => {
-            const key = el.getAttribute("data-translate"); // Obtenha a chave do atributo data-translate
-            el.textContent = translations["en"][key]; // Traduza o texto
-        });
-        body.setAttribute("lang", "en"); // Alterne o atributo de idioma para Inglês
-    } else {
-        // Traduzir para Português
-        textElements.forEach(el => {
-            const key = el.getAttribute("data-translate");
-            el.textContent = translations["pt-br"][key];
-        });
-        body.setAttribute("lang", "pt-br"); // Alterne o atributo de idioma para Português
-    }
+// Função para aplicar o idioma salvo ao carregar a página
+function applySavedLanguage() {
+    const savedLanguage = localStorage.getItem("preferredLanguage") || "pt-br";
+    translatePage(savedLanguage);
 }
 
 // Anexe a função ao seu botão
-document.querySelector("#translate-button").addEventListener("click", translateTexts);
+document.querySelector("#translate-button").addEventListener("click", toggleLanguage);
+
+// Aplicar a linguagem salva ao carregar a página
+document.addEventListener("DOMContentLoaded", applySavedLanguage);
+
+
+
+
 

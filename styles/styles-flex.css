@@ -6,7 +6,7 @@ section {
 
 
 .span-flex {
-    font-size: xxx-large;
+    font-size: 1.6em;
     background: var(--bg-linear-purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
