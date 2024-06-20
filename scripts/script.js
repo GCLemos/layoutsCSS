@@ -23,7 +23,7 @@ const translations = {
         "properties-flex": "Flexbox Properties",
         "properties-grid": "Grid Properties",
         "about-site": "This website is designed to help you learn and understand the various properties of Flexbox and Grid.",
-        "site-guide": "Use the menu above to navigate through different sections and explore the real time examples."
+        "site-guide": "Use the menu above to navigate through different sections and explore the real time examples.",
         "complete-flexbox": "Complete Flexbox"
     },
     "pt-br": {
