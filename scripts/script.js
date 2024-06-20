@@ -76,5 +76,25 @@ document.addEventListener("DOMContentLoaded", applySavedLanguage);
 
 
 
+function toggleLightDarkMode() {
+    const body = document.body;
+    const newMode = body.classList.contains("light-mode") ? "dark-mode" : "light-mode";
+
+    body.classList.toggle("light-mode");
+    localStorage.setItem("preferredMode", newMode);
+}
+
+// Aplicar a preferência salva ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const savedMode = localStorage.getItem("preferredMode") || "dark-mode";
+    if (savedMode === "light-mode") {
+        document.body.classList.add("light-mode");
+    }
+});
+
+// Anexe a função ao seu botão
+document.querySelector("#mode-toggle-button").addEventListener("click", toggleLightDarkMode);
+
+
 
 

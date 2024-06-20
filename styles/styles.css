@@ -7,8 +7,38 @@
     --bg-linear-blue-animation: linear-gradient(110deg, rgba(126, 218, 227, 1) 0%, rgba(151, 128, 229, 1) 50%, rgba(126, 218, 227, 1) 100%);
     --bg-linear-blue-to-purple-animation: linear-gradient(110deg, rgba(126, 218, 227, 1) 0%, rgba(151, 128, 229, 1) 25%, rgba(230, 102, 204, 1) 75%, rgba(126, 218, 227, 1) 90%, rgba(126, 218, 227, 1) 100%);
 
-    --bg-light-gray: #252525;
-    --off-white: #e6e4de;
+    --bg-body-color: #1f1f1d;
+    --bg-nav-color: #333;
+    --bg-layouts-containers-color: #252525;
+
+    --bg-nav-hover: #575757;
+    --bg-link-to-hover: #3a3a3a;
+
+    --text-color: #e6e4de;
+    --text-color-examples: #111111;
+    --text-color-select: #111111;
+    --bg-link-to: #252525;
+}
+
+body.light-mode {
+
+    --bg-linear-purple: linear-gradient(90deg, rgba(101, 78, 168, 1) 0%, rgba(174, 58, 145, 1) 100%);
+    --bg-linear-blue: linear-gradient(90deg, rgba(80, 166, 174, 1) 0%, rgba(101, 78, 168, 1) 100%);
+
+    --bg-linear-blue-animation: linear-gradient(110deg, rgba(80, 166, 174, 1) 0%, rgba(101, 78, 168, 1) 50%, rgba(80, 166, 174, 1) 100%);
+    --bg-linear-blue-to-purple-animation: linear-gradient(110deg, rgba(80, 166, 174, 1) 0%, rgba(101, 78, 168, 1) 25%, rgba(174, 58, 145, 1) 75%, rgba(80, 166, 174, 1) 90%, rgba(80, 166, 174, 1) 100%);
+
+    --bg-body-color: #fefefe;
+    --bg-nav-color: #cccccc;
+    --bg-layouts-containers-color: #e0e0e0;
+
+    --bg-nav-hover: #b0b0b0;
+    --bg-link-to-hover: #d0d0d0;
+
+    --text-color: #1f1f1d;
+    --text-color-select: #dfdfdf;
+    --bg-link-to: #e6e6e6;
+        
 }
 
 @keyframes background-pan {
@@ -32,8 +62,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #1f1f1d;
-    color: var(--off-white);
+    background-color: var(--bg-body-color);
+    color: var(--text-color);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -56,7 +86,7 @@ header {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    color: var(--off-white);
+    color: var(--text-color);
     padding: 0.4rem;
     text-align: center;
 }
@@ -132,7 +162,7 @@ input {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    background-color: #333;
+    background-color: var(--bg-nav-color);
     transition: top 0.3s ease-in-out;
     position: fixed; /* Navbar fixa no topo */
     top: 0; /* Inicialmente no topo */
@@ -144,7 +174,7 @@ input {
 }
 
 .navbar a {
-    color: var(--off-white);
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px 15px;
     display: block;
@@ -152,7 +182,7 @@ input {
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    background-color: var(--bg-nav-hover);
     border-radius: 5px;
 }
 
@@ -171,7 +201,7 @@ input {
     color: inherit;
     width: 90%;
     height: 80px;
-    background-color: var(--bg-light-gray);
+    background-color: var(--bg-link-to);
     border-radius: 20px;
     line-height: 1.6;
     padding: 0.8rem;
@@ -216,7 +246,7 @@ input {
 }
 
 .link-to:hover {
-    background-color: #3f3f3f;
+    background-color: var(--bg-link-to-hover);
     cursor: pointer;
 }
 
@@ -234,9 +264,10 @@ input {
 .controls select, .controls input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.85rem;
+    color: var(--text-color-select);
     width: 100%;
     height: 2.5em;
-    background-color: var(--off-white);
+    background-color: var(--text-color);
     padding-left: 0.7rem;
     margin-right: 1rem;
     justify-content: center;
@@ -252,7 +283,7 @@ footer {
 }
 
 footer hr {
-    color: var(--off-white);
+    color: var(--text-color);
     width: 100%;
 }
 
@@ -282,13 +313,6 @@ footer .fa-brands:hover  {
 footer a {
     color: inherit;
 }
-
-body.light-mode {
-    filter: invert(95%) hue-rotate(180deg);
-    background-color: var(--bg-LM-main-bg);
-}
-
-
 
 
 @media (min-height: 481px) {
