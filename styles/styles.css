@@ -10,14 +10,15 @@
     --bg-body-color: #1f1f1d;
     --bg-nav-color: #333;
     --bg-layouts-containers-color: #252525;
-
+    --bg-flex-item: #9780e5;
+    --bg-grid-item: #7EDAE3;
     --bg-nav-hover: #575757;
     --bg-link-to-hover: #3a3a3a;
+    --bg-link-to: #252525;
 
     --text-color: #e6e4de;
     --text-color-examples: #111111;
     --text-color-select: #111111;
-    --bg-link-to: #252525;
 }
 
 body.light-mode {
@@ -30,15 +31,25 @@ body.light-mode {
 
     --bg-body-color: #fefefe;
     --bg-nav-color: #cccccc;
+    --bg-link-to: #dddddd;
     --bg-layouts-containers-color: #e0e0e0;
+    --bg-flex-item: #7e65c9;
+    --bg-grid-item: #6ccad6;
+
 
     --bg-nav-hover: #b0b0b0;
     --bg-link-to-hover: #d0d0d0;
 
     --text-color: #1f1f1d;
     --text-color-select: #dfdfdf;
-    --bg-link-to: #e6e6e6;
-        
+}
+
+body.light-mode .buttons {
+    filter: invert(95%) hue-rotate(180deg);
+}
+
+body.light-mode .buttons:hover {
+    background-color: #464646;
 }
 
 @keyframes background-pan {
@@ -143,15 +154,22 @@ input {
 }
 
 .translate-button {
-    filter: invert(95%) hue-rotate(180deg);
     background: url(../assets/brasil.png) no-repeat center;
-    background-size: contain;  
+    background-size: contain;
     width: 20px;
-    height: 8px
+    height: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.translate-button.us {
+    background: url(../assets/united-states.png) no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px
 }
 
 .light-dark-button {
-    background: url(../assets/lightbulb-solid.svg) no-repeat center; 
+    background: url(../assets/lightbulb-solid.svg) no-repeat center;
     width: 20px;
     height: 8px;
 }
@@ -164,13 +182,17 @@ input {
     list-style: none;
     background-color: var(--bg-nav-color);
     transition: top 0.3s ease-in-out;
-    position: fixed; /* Navbar fixa no topo */
-    top: 0; /* Inicialmente no topo */
-    z-index: 1000; /* Sobrepor outros elementos */
+    position: fixed;
+    /* Navbar fixa no topo */
+    top: 0;
+    /* Inicialmente no topo */
+    z-index: 1000;
+    /* Sobrepor outros elementos */
 }
 
 .navbar.hidden {
-    top: -100px; /* Esconde a navbar */
+    top: -100px;
+    /* Esconde a navbar */
 }
 
 .navbar a {
@@ -261,7 +283,8 @@ input {
     line-height: 1.6;
 }
 
-.controls select, .controls input {
+.controls select,
+.controls input {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.85rem;
     color: var(--text-color-select);
@@ -299,7 +322,7 @@ footer .fa-brands {
     transition: all 0.2s ease-in-out;
 }
 
-footer .fa-brands:hover  {
+footer .fa-brands:hover {
     transform: scale(1.1);
     animation: background-pan 1.5s linear infinite;
     background: var(--bg-linear-blue-animation);

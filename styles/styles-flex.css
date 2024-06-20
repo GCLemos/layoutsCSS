@@ -23,7 +23,7 @@ section {
 }
 
 .flex-item {
-    background-color: #9780e5;
+    background-color: var(--bg-flex-item);
     border-radius: 10px;
     color: var(--text-color-examples);
     padding: 1rem;

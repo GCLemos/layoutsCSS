@@ -16,7 +16,7 @@ section {
 }
 
 .grid-item {
-    background-color: #7edae3;
+    background-color: var(--bg-grid-item);
     min-height: 1em;
     min-width: 2em;
     border-radius: 10px;

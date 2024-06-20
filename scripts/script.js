@@ -52,6 +52,14 @@ function translatePage(newLanguage) {
 
     // Salve a nova linguagem no localStorage
     localStorage.setItem("preferredLanguage", newLanguage);
+
+    // Atualize o ícone da linguagem
+    const buttons = document.querySelector(".buttons");
+    if (newLanguage === "en") {
+        buttons.classList.add("us");
+    } else {
+        buttons.classList.remove("us");
+    }
 }
 
 // Função para alternar entre idiomas
@@ -73,7 +81,6 @@ document.querySelector("#translate-button").addEventListener("click", toggleLang
 
 // Aplicar a linguagem salva ao carregar a página
 document.addEventListener("DOMContentLoaded", applySavedLanguage);
-
 
 
 function toggleLightDarkMode() {
