@@ -84,6 +84,7 @@ body {
     flex-direction: column;
     gap: 2em;
     transition: all 0.2s ease-in-out;
+    min-height: 100vh;
 }
 
 .content-container {
@@ -301,16 +302,18 @@ input {
 
 footer {
     width: 90%;
-    padding: 1em;
+    height: 100%;
     display: flex;
+    padding: 0.5em;
     flex-direction: column;
-    gap: 0.8em;
     align-items: center;
+    justify-content: center;
+    gap: 0.7em;
 }
 
-footer hr {
+hr {
     color: var(--text-color);
-    width: 100%;
+    width: 90%;
 }
 
 footer span {
@@ -323,6 +326,7 @@ footer span {
 footer .fa-brands {
     font-size: 2em;
     transition: all 0.2s ease-in-out;
+    padding-bottom: 0.3em;
 }
 
 footer .fa-brands:hover {
@@ -339,6 +343,8 @@ footer .fa-brands:hover {
 footer a {
     color: inherit;
 }
+
+
 
 
 @media (min-height: 481px) {
