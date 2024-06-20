@@ -101,7 +101,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Anexe a função ao seu botão
 document.querySelector("#mode-toggle-button").addEventListener("click", toggleLightDarkMode);
-
-
-
-
