@@ -55,7 +55,7 @@ function translatePage(newLanguage) {
 
     // Atualize o ícone da linguagem
     const buttons = document.querySelector(".buttons");
-    if (newLanguage === "en") {
+    if (newLanguage === "pt-br") {
         buttons.classList.add("us");
     } else {
         buttons.classList.remove("us");
